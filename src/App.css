@@ -1,65 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
 body {
   background-color: #040404;
 }
-/* .app-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  background-color: #111;
-  color: white;
+* {
+  font-family: 'Tajawal', sans-serif;
 }
-.tv-app {
-  font-family: Arial, sans-serif;
-}
-
-.main-menu ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-.main-menu button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-}
-
-.featured-video {
-  display: flex;
-  flex-direction: row;
-  margin: 20px;
-}
-
-.featured-image {
-  width: 400px;
-}
-
-.video-info {
-  margin-left: 20px;
-}
-
-.trending-section {
-  margin: 20px;
-}
-
-.trending-carousel {
-  display: flex;
-  overflow-x: auto;
-}
-
-.video-card {
-  margin-right: 20px;
-}
-
-.video-image {
-  width: 200px;
-  height: 300px;
-}
-
-.watch-btn {
-  background-color: #ff0000;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-} */

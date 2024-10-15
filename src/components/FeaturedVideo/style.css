@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
 .featured-video {
   flex: 1;
   position: relative;
@@ -16,7 +18,7 @@
 }
 .category {
   display: block;
-  font-family: Sans-Serif Tajawal;
+  font-family: 'Tajawal', sans-serif;
   font-size: 24px;
   color: #858688;
 }

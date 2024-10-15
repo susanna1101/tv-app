@@ -1,92 +1,45 @@
 import React, { useState } from 'react';
 import './style.css';
-import ProfileInfo from '../ProfileInfo'
+import ProfileInfo from '../ProfileInfo';
 import { Link, useLocation } from 'react-router-dom';
 
-const path = '../../assets'
+const path = '../../assets';
+
+const menuItems = [
+  { to: '/Search', label: 'Search', icon: 'ICON - Search.png' },
+  { to: '/', label: 'Home', icon: 'Group 46.png' },
+  { to: '/tv', label: 'TV Shows', icon: 'Group 56.png' },
+  { to: '/movies', label: 'Movies', icon: 'Group 54.png' },
+  { to: '/gentres', label: 'Genres', icon: 'Group 53.png' },
+  { to: '/watchLater', label: 'Watch Later', icon: 'Group 47.png' }
+];
+
 const MainMenu = () => {
-    const [isHovered, setIsHovered] = useState(false);
-    const location = useLocation();
+  const [isHovered, setIsHovered] = useState(false);
+  const { pathname } = useLocation();
 
   return (
     <div 
-        className={`menu-container ${isHovered ? 'hovered' : ''}`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}>
-          <div className={`profile ${isHovered ? 'hovered' : ''}`}>
-            <div className='profile-img'>
-            </div>
-            <div className='profile-name'>User</div>
-          </div>
-      <div className="menu-icons">
-        {/* Add menu icons here */}
-          <Link
-            to="/Search" 
-            className={`item ${location.pathname === '/Search' ? 'active' : ''}`}
-          >
-            <div className="menu-item search">
-              <div className='menu-icon'>
-                <img src={`${path}/icons/ICON - Search.png`} />
-              </div>
-                <span>Search</span>
-            </div>
-          </Link>
-          <Link
-            to="/" 
-            className={`item ${location.pathname === '/' ? 'active' : ''}`}
-          >
-            <div className="menu-item home">
-              <div className='menu-icon'>
-                <img src={`${path}/icons/Group 46.png`} />
-              </div>
-                <span>Home Page</span>
-              </div>
-          </Link>
-          <Link
-            to="/tv" 
-            className={`item ${location.pathname === '/tv' ? 'active' : ''}`}
-          >
-            <div className="menu-item tv">
-              <div className='menu-icon'>
-                <img src={`${path}/icons/Group 56.png`} />
-              </div>
-              <span>TV Shows</span>
-            </div>
-          </Link>
-          <Link
-            to="/movies" 
-            className={`item ${location.pathname === '/movies' ? 'active' : ''}`}
-          >
-            <div className="menu-item movies">
-              <div className='menu-icon'>
-                <img src={`${path}/icons/Group 54.png`} />
-              </div>
-              <span>Movies</span>
-            </div>
-          </Link>
-          <Link
-            to="/gentres" 
-            className={`item ${location.pathname === '/gentres' ? 'active' : ''}`}
-          >
-            <div className="menu-item gentres">
-              <div className='menu-icon'>
-                <img src={`${path}/icons/Group 53.png`} />
-              </div>
-              <span>Gentres</span>
-            </div>
-          </Link>
-          <Link
-            to="/watchLater" 
-            className={`item ${location.pathname === '/watchLater' ? 'active' : ''}`}
-          >
-            <div className="menu-item watch">
-              <div className='menu-icon'>
-                <img src={`${path}/icons/Group 47.png`} />
-              </div>
-              <span>Watch Later</span>
-            </div>
-          </Link>
+      className={`menu-container ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className={`profile ${isHovered ? 'hovered' : ''}`}>
+        <div className='profile-img'></div>
+        <div className='profile-name'>User</div>
       </div>
+
+      <div className="menu-icons">
+        {menuItems.map(({ to, label, icon }) => (
+          <Link key={to} to={to} className={`item ${pathname === to ? 'active' : ''}`}>
+            <div className={`menu-item ${label.toLowerCase().replace(' ', '-')}`}>
+              <img src={`${path}/icons/${icon}`} alt={label} className='menu-icon' />
+              <span>{label}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+      
       <ProfileInfo hover={isHovered} />
     </div>
   );
