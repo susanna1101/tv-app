@@ -5,7 +5,6 @@ import './style.css';
 
 const path = '../../assets/'
 const FeaturedVideo = ({ data }) => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const {Featured, TendingNow} = data
   const [featuredMovie, setFeaturedMovie] = useState(null);
   const [featuredUpdatedMovie, setFeaturedUpdatedMovie] = useState({
@@ -24,14 +23,13 @@ const FeaturedVideo = ({ data }) => {
     const minutes = Math.floor((seconds % 3600) / 60);
     return `${hours}h ${minutes}m`;
   };
-    // Handle movie click
     const handleMovieClick = (movie) => {
       setFeaturedMovie(movie);
-      sessionStorage.setItem('lastSeenMovieId', movie.Id); // Save clicked movie to sessionStorage
+      sessionStorage.setItem('lastSeenMovieId', movie.Id);
   
       setTimeout(() => {
         setShowVideo(true);
-      }, 2000); // Change to video background after 2 seconds
+      }, 2000);
     };
 
     useEffect(()=>{
@@ -61,10 +59,19 @@ const FeaturedVideo = ({ data }) => {
             <div className="video-info">
               <span className='category'>{featuredUpdatedMovie.Category}</span>
               <img src={`${path}/${featuredUpdatedMovie.TitleImage}`} />
-              <span className='details'>{featuredUpdatedMovie.ReleaseYear}{featuredUpdatedMovie.MpaRating}{formatDuration(featuredUpdatedMovie.Duration)}</span>
+              <span className='details'>
+                <span>
+                  {featuredUpdatedMovie.ReleaseYear}
+                </span>
+                <span>
+                  {featuredUpdatedMovie.MpaRating}
+                </span>
+                <span>
+                  {formatDuration(featuredUpdatedMovie.Duration)}</span>
+                </span>
               <p>{featuredUpdatedMovie.Description}</p>
               <div>
-                <button className='btn play'>
+                <button className='btn'>
                   <img src="../../assets/icons/Play_symbol.png" />
                   Play
                 </button>
@@ -74,7 +81,6 @@ const FeaturedVideo = ({ data }) => {
           <TrendingNow setFeaturedMovie={setFeaturedMovie} handleMovieClick={handleMovieClick} data={TendingNow} />
           </div>
         </div>
-      {/* )} */}
     </div>
   );
 };

@@ -1,4 +1,3 @@
-// Home.js
 import React from 'react';
 import FeaturedVideo from '../../components/FeaturedVideo';
 import data from '../../data/data.json';

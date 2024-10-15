@@ -30,7 +30,7 @@
 }
 
 .carousel-item {
-  min-width: 12.5%; /* Each item takes up 1/8th of the view */
+  min-width: 12.5%;
   cursor: pointer;
 }
 
