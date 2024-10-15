@@ -1,0 +1,16 @@
+.profile-info {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    color: transparent;
+}
+
+.profile-item {
+    margin-top: 15px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.show {
+    color: #858688;
+    transition: .5s;
+}

@@ -1,0 +1,45 @@
+.trending-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-section {
+  position: relative;
+  height: 400px;
+}
+
+.featured-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-section .background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.carousel-item {
+  min-width: 12.5%; /* Each item takes up 1/8th of the view */
+  cursor: pointer;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel:active {
+  cursor: grabbing;
+}
