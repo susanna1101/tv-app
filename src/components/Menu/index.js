@@ -33,7 +33,9 @@ const MainMenu = () => {
         {menuItems.map(({ to, label, icon }) => (
           <Link key={to} to={to} className={`item ${pathname === to ? 'active' : ''}`}>
             <div className={`menu-item ${label.toLowerCase().replace(' ', '-')}`}>
-              <img src={`${path}/icons/${icon}`} alt={label} className='menu-icon' />
+              <div className='menu-icon'>
+                <img src={`${path}/icons/${icon}`} alt={label} />
+              </div>
               <span>{label}</span>
             </div>
           </Link>
