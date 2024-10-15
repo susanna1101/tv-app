@@ -22,7 +22,7 @@
 			"MpaRating": "18+",
 			"Category": "Movie",
 			"Duration": "2000",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "https://www.w3schools.com/html/movie.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -35,7 +35,7 @@
 			"MpaRating": "18+",
 			"Category": "TV Show",
 			"Duration": "2300",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -48,7 +48,7 @@
 			"MpaRating": "18+",
 			"Category": "Movie",
 			"Duration": "6000",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -61,7 +61,7 @@
 			"MpaRating": "18+",
 			"Category": "Movie",
 			"Duration": "4000",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -74,7 +74,7 @@
 			"MpaRating": "18+",
 			"Category": "TV Show",
 			"Duration": "5300",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -87,7 +87,7 @@
 			"MpaRating": "18+",
 			"Category": "TV Show",
 			"Duration": "1200",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -100,7 +100,7 @@
 			"MpaRating": "18+",
 			"Category": "Movie",
 			"Duration": "4500",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -113,7 +113,7 @@
 			"MpaRating": "18+",
 			"Category": "TV Show",
 			"Duration": "2000",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
 			"Description": "Info About it"
 		},
 		{
@@ -126,7 +126,7 @@
 			"MpaRating": "18+",
 			"Category": "Movie",
 			"Duration": "2300",
-			"VideoUrl": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+			"VideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
 			"Description": "Info About it"
 		},
 		{

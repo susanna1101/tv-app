@@ -19,30 +19,32 @@ const MainMenu = () => {
   const { pathname } = useLocation();
 
   return (
-    <div 
-      className={`menu-container ${isHovered ? 'hovered' : ''}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className={`profile ${isHovered ? 'hovered' : ''}`}>
-        <div className='profile-img'></div>
-        <div className='profile-name'>User</div>
-      </div>
+    <div className={`menu-container ${isHovered ? 'menu-container-hovered' : ''}`}>
+      <div 
+        className={`menu-wrapper ${isHovered ? 'hovered' : ''}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className={`profile ${isHovered ? 'hovered' : ''}`}>
+          <div className='profile-img'></div>
+          <div className='profile-name'>User</div>
+        </div>
 
-      <div className="menu-icons">
-        {menuItems.map(({ to, label, icon }) => (
-          <Link key={to} to={to} className={`item ${pathname === to ? 'active' : ''}`}>
-            <div className={`menu-item ${label.toLowerCase().replace(' ', '-')}`}>
-              <div className='menu-icon'>
-                <img src={`${path}/icons/${icon}`} alt={label} />
+        <div className="menu-icons">
+          {menuItems.map(({ to, label, icon }) => (
+            <Link key={to} to={to} className={`item ${pathname === to ? 'active' : ''}`}>
+              <div className={`menu-item ${label.toLowerCase().replace(' ', '-')}`}>
+                <div className='menu-icon'>
+                  <img src={`${path}/icons/${icon}`} alt={label} />
+                </div>
+                <span>{label}</span>
               </div>
-              <span>{label}</span>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
+        
+        <ProfileInfo hover={isHovered} />
       </div>
-      
-      <ProfileInfo hover={isHovered} />
     </div>
   );
 };
