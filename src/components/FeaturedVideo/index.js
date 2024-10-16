@@ -67,8 +67,8 @@ const FeaturedVideo = ({ data }) => {
                   {formatDuration(featuredUpdatedMovie.Duration)}</span>
                 </span>
               <p>{featuredUpdatedMovie.Description}</p>
-              <div>
-                <button className='btn'>
+              <div className='buttons'>
+                <button className='btn play'>
                   <img src="../../assets/icons/play.png" />
                   Play
                 </button>
