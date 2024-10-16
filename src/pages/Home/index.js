@@ -1,13 +1,14 @@
 import React from 'react';
 import FeaturedVideo from '../../components/FeaturedVideo';
 import data from '../../data/data.json';
-import MainMenu from '../../components/Menu';
+import Layout from '../../components/Layout';
 
 const Home = () => {
   return (
     <>
-      <MainMenu />
-      <FeaturedVideo data={data} />
+      <Layout>
+        <FeaturedVideo data={data} />
+      </Layout>
     </>
   );
 };

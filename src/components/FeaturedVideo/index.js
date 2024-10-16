@@ -101,15 +101,15 @@ const FeaturedVideo = ({ data }) => {
                     {formatDuration(featuredUpdatedMovie.Duration)}</span>
                   </span>
                 <p>{featuredUpdatedMovie.Description}</p>
-                <div>
-                  <button className='btn'>
-                    <img src="../../assets/icons/Play_symbol.png" />
+                <div className='buttons'>
+                  <button className='btn play'>
+                    <img src="../../assets/icons/play.png" />
                     Play
                   </button>
                   <button className='btn more'>More Info</button>
                 </div>
               </div>
-            <TrendingNow setFeaturedMovie={setFeaturedMovie} handleMovieClick={handleMovieClick} data={TendingNow} />
+            <TrendingNow featuredMovie={featuredMovie} setFeaturedMovie={setFeaturedMovie} handleMovieClick={handleMovieClick} data={TendingNow} />
             </div>
           </div>
         </>

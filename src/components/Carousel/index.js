@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './style.css';
+import Item from './item';
 
-const TrendingNow = ({ movies, handleMovieClick, setFeaturedMovie }) => {
+const TrendingNow = ({ movies, handleMovieClick, setFeaturedMovie, featuredMovie }) => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
@@ -49,14 +50,7 @@ const TrendingNow = ({ movies, handleMovieClick, setFeaturedMovie }) => {
         onTouchStart={handleMouseDown}
       >
         {trendingMovies.map((movie, index) => (
-          <div
-            key={movie.Id}
-            className="carousel-item"
-            onClick={() => handleMovieClick(movie)}
-            style={{ transform: `translateX(${-currentIndex * 100}%)`, transition: 'transform 0.5s ease-in-out' }}
-          >
-            <img src={`../../assets/${movie.CoverImage}`} alt={movie.Title} />
-          </div>
+          <Item movie={movie} featuredMovie={featuredMovie} handleMovieClick={handleMovieClick} currentIndex={currentIndex} /> 
         ))}
       </div>
     </div>

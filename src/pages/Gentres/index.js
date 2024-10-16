@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 
-const TvShows = () => {
+const Gentres = () => {
   return (
     <Layout>
       tv
@@ -9,4 +9,4 @@ const TvShows = () => {
   );
 };
 
-export default TvShows;
+export default Gentres;

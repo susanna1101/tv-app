@@ -27,19 +27,42 @@
   display: flex;
   overflow: hidden;
   cursor: grab;
+  align-items: flex-end;
 }
 
 .carousel-item {
   min-width: 12.5%;
   cursor: pointer;
+  transition: .8s;
 }
 
 .carousel-item img {
   width: 100%;
   height: auto;
   display: block;
+  transition: .8s;
 }
 
 .carousel:active {
   cursor: grabbing;
+}
+
+.carousel-item.active-carousel-item {
+  transition: .8s;
+  min-width: 13%;
+  z-index: 10;
+}
+.carousel-item.active-carousel-item img {
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from { 
+    transition: .5s;
+    transform: scale(1);
+   }
+  to { 
+    transition: .5s;
+    transform: scale(1.2);
+   }
 }
