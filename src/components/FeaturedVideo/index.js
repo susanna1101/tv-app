@@ -69,7 +69,7 @@ const FeaturedVideo = ({ data }) => {
               <p>{featuredUpdatedMovie.Description}</p>
               <div>
                 <button className='btn'>
-                  <img src="../../assets/icons/Play_symbol.png" />
+                  <img src="../../assets/icons/play.png" />
                   Play
                 </button>
                 <button className='btn more'>More Info</button>
